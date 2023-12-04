@@ -68,8 +68,8 @@ typedef uint64_t cc128_addr_t;
 #pragma GCC diagnostic ignored "-Wpedantic"
 enum {
     _CC_FIELD(UPERMS, 127, 124),
-    _CC_FIELD(HWPERMS, 123, 112),
-    _CC_FIELD(RESERVED, 111, 110),
+    _CC_FIELD(HWPERMS, 123, 111),
+    _CC_FIELD(RESERVED, 110, 110),
     _CC_FIELD(FLAGS, 109, 109),
     _CC_FIELD(OTYPE, 108, 91),
     _CC_FIELD(EBT, 90, 64),
@@ -107,8 +107,9 @@ enum {
 #define CC128_PERM_UNSEAL (1 << 9)
 #define CC128_PERM_ACCESS_SYS_REGS (1 << 10)
 #define CC128_PERM_SETCID (1 << 11)
+#define CC128_PERM_WRITE_AND_READ (1 << 12)
 
-#define CC128_HIGHEST_PERM CC128_PERM_SETCID
+#define CC128_HIGHEST_PERM CC128_PERM_WRITE_AND_READ
 
 _CC_STATIC_ASSERT(CC128_HIGHEST_PERM < CC128_FIELD_HWPERMS_MAX_VALUE, "permissions not representable?");
 _CC_STATIC_ASSERT((CC128_HIGHEST_PERM << 1) > CC128_FIELD_HWPERMS_MAX_VALUE, "all permission bits should be used");
