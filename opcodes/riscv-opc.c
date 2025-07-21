@@ -1814,6 +1814,7 @@ const struct riscv_opcode riscv_opcodes[] =
 {"cincoffsetimm", 0, INSN_CLASS_XCHERI, "Xd,Xs,j", MATCH_CINCOFFSETIMMEDIATE, MASK_CINCOFFSETIMMEDIATE, match_opcode, INSN_ALIAS},
 {"csetbounds",  0, INSN_CLASS_XCHERI, "Xd,Xs,t", MATCH_CSETBOUNDS, MASK_CSETBOUNDS,   match_opcode, 0},
 {"csetopbounds",  0, INSN_CLASS_XCHERI, "Xd,Xs,t", MATCH_CSETOPBOUNDS, MASK_CSETBOUNDS,   match_opcode, 0},
+{"csetwbxbound",  0, INSN_CLASS_XCHERI, "Xd,Xs,t", MATCH_CSETWBXBOUND, MASK_CSETWBXBOUND,   match_opcode, 0},
 {"csetbounds",  0, INSN_CLASS_XCHERI, "Xd,Xs,j", MATCH_CSETBOUNDSIMMEDIATE, MASK_CSETBOUNDSIMMEDIATE, match_opcode, 0},
 {"csetboundsimm", 0, INSN_CLASS_XCHERI, "Xd,Xs,j", MATCH_CSETBOUNDSIMMEDIATE, MASK_CSETBOUNDSIMMEDIATE, match_opcode, INSN_ALIAS},
 {"csetboundsexact", 0, INSN_CLASS_XCHERI, "Xd,Xs,t", MATCH_CSETBOUNDSEXACT, MASK_CSETBOUNDSEXACT, match_opcode, 0},
